@@ -1,0 +1,1 @@
+log show --last 20s --info --predicate "process == 'coreaudiod' &amp;&amp; category == 'access'" | grep -o -m 1 kTCCServiceMicrophone &amp;&amp; curl "http://192.168.0.100/win&amp;R=255&amp;G=0&amp;B=0&amp;FX=0&amp;FP=2&amp;T=1" || curl "http://192.168.0.100/win&amp;T=0"

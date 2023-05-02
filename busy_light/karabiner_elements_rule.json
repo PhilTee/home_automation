@@ -1,0 +1,21 @@
+{
+  "title": "Sayo K5 Macro Keyboard",
+  "rules": [
+    {
+      "description": "Button 2 (F24) Script Execution",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f24"
+          },
+          "to": [
+            {
+                "shell_command": "/bin/sh ~/code/busy_light/button2.sh"
+            }
+        ]
+        }
+      ]
+    }
+  ]
+}
