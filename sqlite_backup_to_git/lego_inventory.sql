@@ -34,8 +34,9 @@ INSERT INTO lego_sets VALUES(22,'Izzie and Bunchurro the Gaming Bunny','LEGO DRE
 INSERT INTO lego_sets VALUES(23,'Cooper''s Gaming Controller Jet','LEGO DREAMZzz',71489,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71489_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6553484.pdf','Not got the minifig''s weapon','2026-02-08 15:51:55.979192','2026-02-08 15:51:55.979192',4);
 INSERT INTO lego_sets VALUES(24,'Crocodile Car','LEGO DREAMZzz',71458,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71458_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6501858.pdf',replace('Just the croc and some wheels.\nNo minifigs, or motorbikes','\n',char(10)),'2026-02-08 20:49:06.986619','2026-02-08 20:49:06.986619',4);
 INSERT INTO lego_sets VALUES(25,'Mateo and Z-Blob the Robot','LEGO DREAMZzz',71454,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71454_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6499537.pdf','Just the robot and the minifig''s spear. No minifigs, or bug.','2026-02-08 21:39:14.527623','2026-02-08 21:44:57.127025',4);
+INSERT INTO lego_sets VALUES(26,'Newbury Juice Bar','Hidden Side',40336,0,'https://www.lego.com/cdn/product-assets/product.img.pri/40336_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6295315.pdf','No minifigs. Phone, clear bottle, and green drinking glass are missing.','2026-03-01 13:48:09.355098','2026-03-01 13:48:09.355098',4);
 DELETE FROM sqlite_sequence;
-INSERT INTO sqlite_sequence VALUES('lego_sets',25);
+INSERT INTO sqlite_sequence VALUES('lego_sets',26);
 INSERT INTO sqlite_sequence VALUES('locations',6);
 CREATE INDEX "index_lego_sets_on_location_id" ON "lego_sets" ("location_id");
 COMMIT;
