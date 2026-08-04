@@ -37,8 +37,11 @@ INSERT INTO lego_sets VALUES(25,'Mateo and Z-Blob the Robot','LEGO DREAMZzz',71
 INSERT INTO lego_sets VALUES(26,'Newbury Juice Bar','Hidden Side',40336,0,'https://www.lego.com/cdn/product-assets/product.img.pri/40336_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6295315.pdf','No minifigs. Phone, clear bottle, and green drinking glass are missing.','2026-03-01 13:48:09.355098','2026-03-01 13:48:09.355098',4);
 INSERT INTO lego_sets VALUES(27,'El Fuego''s Stunt Plane','Hidden Side',70429,2,'https://www.lego.com/cdn/product-assets/product.img.pri/70429_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6314468.pdf','Plane only, no mini figs, dog or slime','2026-06-22 11:52:54.584987','2026-06-22 11:52:54.584987',4);
 INSERT INTO lego_sets VALUES(28,'Newbury Subway','Hidden Side',70430,2,'https://www.lego.com/cdn/product-assets/product.img.pri/70430_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6314470.pdf','No minifigs, bike, skateboard, dog or slime parts','2026-06-22 11:56:55.334113','2026-06-22 11:56:55.334113',4);
+INSERT INTO lego_sets VALUES(29,'Mrs. Castillo''s Turtle Van','LEGO DREAMZzz',71456,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71456_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6474343.pdf','No minifigs or their accessories. No little green or black figures. No palm tree.','2026-08-03 18:35:53.090093','2026-08-03 18:35:53.090093',4);
+INSERT INTO lego_sets VALUES(30,'Mr. Oz''s Spacebus','LEGO DREAMZzz',71460,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71460_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6474157.pdf','No minifigures or accessories. No green character and rope. No blue character. No winged pink thing. One black character (round helmet, no accessories), other black characters not present.','2026-08-03 18:59:35.092641','2026-08-03 18:59:35.092641',4);
+INSERT INTO lego_sets VALUES(31,'Nightmare Shark Ship','LEGO DREAMZzz',71469,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71469_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6474159.pdf','No minifigs. Not sure what else (Ros has pics)','2026-08-03 19:02:27.787999','2026-08-03 19:02:27.787999',4);
 DELETE FROM sqlite_sequence;
-INSERT INTO sqlite_sequence VALUES('lego_sets',28);
+INSERT INTO sqlite_sequence VALUES('lego_sets',31);
 INSERT INTO sqlite_sequence VALUES('locations',6);
 CREATE INDEX "index_lego_sets_on_location_id" ON "lego_sets" ("location_id");
 COMMIT;
