@@ -40,8 +40,9 @@ INSERT INTO lego_sets VALUES(28,'Newbury Subway','Hidden Side',70430,2,'https://
 INSERT INTO lego_sets VALUES(29,'Mrs. Castillo''s Turtle Van','LEGO DREAMZzz',71456,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71456_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6474343.pdf','No minifigs or their accessories. No little green or black figures. No palm tree.','2026-08-03 18:35:53.090093','2026-08-03 18:35:53.090093',4);
 INSERT INTO lego_sets VALUES(30,'Mr. Oz''s Spacebus','LEGO DREAMZzz',71460,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71460_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6474157.pdf','No minifigures or accessories. No green character and rope. No blue character. No winged pink thing. One black character (round helmet, no accessories), other black characters not present.','2026-08-03 18:59:35.092641','2026-08-03 18:59:35.092641',4);
 INSERT INTO lego_sets VALUES(31,'Nightmare Shark Ship','LEGO DREAMZzz',71469,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71469_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6474159.pdf','No minifigs. Not sure what else (Ros has pics)','2026-08-03 19:02:27.787999','2026-08-03 19:02:27.787999',4);
+INSERT INTO lego_sets VALUES(32,'Phantom Fire Truck 3000','Hidden Side',70436,0,'https://www.lego.com/cdn/product-assets/product.img.pri/70436_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6325335.pdf','Just the truck, no minifigs or the tall black character','2026-08-23 07:17:27.149528','2026-08-23 07:17:27.149528',4);
 DELETE FROM sqlite_sequence;
-INSERT INTO sqlite_sequence VALUES('lego_sets',31);
+INSERT INTO sqlite_sequence VALUES('lego_sets',32);
 INSERT INTO sqlite_sequence VALUES('locations',6);
 CREATE INDEX "index_lego_sets_on_location_id" ON "lego_sets" ("location_id");
 COMMIT;
