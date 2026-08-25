@@ -12,6 +12,7 @@ INSERT INTO locations VALUES(3,'Kallax 2','2025-08-22 20:29:48.941450','2025-08-
 INSERT INTO locations VALUES(4,'Den Floor','2025-08-22 20:31:01.784451','2025-08-22 20:31:01.784451');
 INSERT INTO locations VALUES(5,'Kallax 3','2025-08-22 20:43:00.635550','2025-08-22 20:43:00.635550');
 INSERT INTO locations VALUES(6,'Kallax 4','2025-08-22 20:54:49.451097','2025-08-22 20:54:49.451097');
+INSERT INTO locations VALUES(7,'Den floor','2026-08-24 20:07:34.326294','2026-08-24 20:07:34.326294');
 CREATE TABLE IF NOT EXISTS "lego_sets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "theme" varchar DEFAULT NULL, "number" integer DEFAULT NULL, "status" integer DEFAULT NULL, "image_url" varchar DEFAULT NULL, "instructions_url" varchar DEFAULT NULL, "comments" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "location_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_758e9a9fcf"
 FOREIGN KEY ("location_id")
   REFERENCES "locations" ("id")
@@ -41,8 +42,9 @@ INSERT INTO lego_sets VALUES(29,'Mrs. Castillo''s Turtle Van','LEGO DREAMZzz'
 INSERT INTO lego_sets VALUES(30,'Mr. Oz''s Spacebus','LEGO DREAMZzz',71460,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71460_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6474157.pdf','No minifigures or accessories. No green character and rope. No blue character. No winged pink thing. One black character (round helmet, no accessories), other black characters not present.','2026-08-03 18:59:35.092641','2026-08-03 18:59:35.092641',4);
 INSERT INTO lego_sets VALUES(31,'Nightmare Shark Ship','LEGO DREAMZzz',71469,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71469_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6474159.pdf','No minifigs. Not sure what else (Ros has pics)','2026-08-03 19:02:27.787999','2026-08-03 19:02:27.787999',4);
 INSERT INTO lego_sets VALUES(32,'Phantom Fire Truck 3000','Hidden Side',70436,0,'https://www.lego.com/cdn/product-assets/product.img.pri/70436_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6325335.pdf','Just the truck, no minifigs or the tall black character','2026-08-23 07:17:27.149528','2026-08-23 07:17:27.149528',4);
+INSERT INTO lego_sets VALUES(33,'Donkey Kong''s Tree House Expansion Set','LEGO Super Mario',71424,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71424_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6472637.pdf','No Donkey Kong, or box with the towbar and scan code.','2026-08-24 20:07:34.441848','2026-08-24 20:54:27.575479',4);
 DELETE FROM sqlite_sequence;
-INSERT INTO sqlite_sequence VALUES('lego_sets',32);
-INSERT INTO sqlite_sequence VALUES('locations',6);
+INSERT INTO sqlite_sequence VALUES('lego_sets',33);
+INSERT INTO sqlite_sequence VALUES('locations',7);
 CREATE INDEX "index_lego_sets_on_location_id" ON "lego_sets" ("location_id");
 COMMIT;
