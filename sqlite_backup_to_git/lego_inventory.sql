@@ -43,8 +43,9 @@ INSERT INTO lego_sets VALUES(30,'Mr. Oz''s Spacebus','LEGO DREAMZzz',71460,0,'
 INSERT INTO lego_sets VALUES(31,'Nightmare Shark Ship','LEGO DREAMZzz',71469,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71469_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6474159.pdf','No minifigs. Not sure what else (Ros has pics)','2026-08-03 19:02:27.787999','2026-08-03 19:02:27.787999',4);
 INSERT INTO lego_sets VALUES(32,'Phantom Fire Truck 3000','Hidden Side',70436,0,'https://www.lego.com/cdn/product-assets/product.img.pri/70436_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6325335.pdf','Just the truck, no minifigs or the tall black character','2026-08-23 07:17:27.149528','2026-08-23 07:17:27.149528',4);
 INSERT INTO lego_sets VALUES(33,'Donkey Kong''s Tree House Expansion Set','LEGO Super Mario',71424,0,'https://www.lego.com/cdn/product-assets/product.img.pri/71424_Prod.png','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6472637.pdf','No Donkey Kong, or box with the towbar and scan code.','2026-08-24 20:07:34.441848','2026-08-24 20:54:27.575479',4);
+INSERT INTO lego_sets VALUES(34,'Dr. Fox™ Laboratory','Unikitty',41454,0,'https://www.lego.com/cdn/product-assets/product.img.pri/41454_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6241518.pdf',replace('Missing one purple and grey antenna, the white satellite dish, a white arm/clip that fits on to the white barrier.\nIncludes chalkboard and bed, but no other characters or bits from the foreground.','\n',char(10)),'2026-08-25 21:10:07.018936','2026-08-25 21:10:07.018936',4);
 DELETE FROM sqlite_sequence;
-INSERT INTO sqlite_sequence VALUES('lego_sets',33);
+INSERT INTO sqlite_sequence VALUES('lego_sets',34);
 INSERT INTO sqlite_sequence VALUES('locations',7);
 CREATE INDEX "index_lego_sets_on_location_id" ON "lego_sets" ("location_id");
 COMMIT;
