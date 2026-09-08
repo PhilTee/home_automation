@@ -3,6 +3,7 @@ BEGIN TRANSACTION;
 CREATE TABLE IF NOT EXISTS "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY);
 INSERT INTO schema_migrations VALUES('20250820225744');
 INSERT INTO schema_migrations VALUES('20250822154303');
+INSERT INTO schema_migrations VALUES('20260907143722');
 CREATE TABLE IF NOT EXISTS "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL);
 INSERT INTO ar_internal_metadata VALUES('environment','development','2025-08-21 20:53:07.972908','2025-08-21 20:53:07.972913');
 INSERT INTO ar_internal_metadata VALUES('schema_sha1','57e850ce27ef98443fbb9c71768dcb759e1b7ca5','2025-08-21 20:53:07.980314','2025-08-21 20:53:07.980339');
@@ -51,11 +52,36 @@ INSERT INTO lego_sets VALUES(39,'Jokerland','DC',76035,0,'https://www.lego.com/c
 INSERT INTO lego_sets VALUES(40,'The Dynamic Duo Funhouse Escape','DC',6857,0,'https://www.lego.com/cdn/product-assets/product.img.pri/6857_prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6004121.pdf',replace('May not have been built correctly.\n2x green flags and black poles missing. Purple translucent cone missing, green barrel on the winch may be a black brick? One red and two grey sloped barriers missing. Black 4x1 railing missing. Big red/white hammer missing. Contents of barrel missing. Launcher for rollercoaster missing. No minifigs, accessories or batcycle.','\n',char(10)),'2026-08-28 16:06:20.198161','2026-08-28 16:07:57.928201',4);
 INSERT INTO lego_sets VALUES(41,'The Three Brothers','Nexo Knights',70350,0,'https://www.lego.com/cdn/product-assets/product.img.pri/70350_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6188220.pdf','Shield insert missing, small blue transparent lighting bolt near catapult missing. No minifigs, characters, or accessories','2026-08-29 13:22:29.886810','2026-08-29 13:23:28.908596',4);
 INSERT INTO lego_sets VALUES(42,'Tormak''s Shadow Blazer','Chima',70222,0,'https://www.lego.com/cdn/product-assets/product.img.pri/70222_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6114647.pdf','Vehicle only. Missing projectile from both black and orange sides. Black Side missing part of the nose and its tooth.','2026-08-29 14:50:58.704084','2026-08-29 14:50:58.704084',4);
-INSERT INTO lego_sets VALUES(43,'Jestro''s Evil Mobile','Nexo Knights',70316,0,'https://www.lego.com/cdn/product-assets/product.img.pri/70316_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6150187.pdf','Missing red and black flags and the arrows they attach to, along with minifigs skull.  No minifigs/characters, accessories or horse.','2026-09-06 14:46:53.796961','2026-09-06 14:46:53.796961',4);
+INSERT INTO lego_sets VALUES(43,'Jestro''s Evil Mobile','Nexo Knights',70316,0,'https://www.lego.com/cdn/product-assets/product.img.pri/70316_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6150187.pdf','Missing red and black flags and the arrows they attach to, along with minifigs skull.  No minifigs/characters, accessories or horse.','2026-09-06 14:46:53.796961','2026-09-07 19:59:27.957133',4);
 INSERT INTO lego_sets VALUES(44,'Beast Master''s Chaos Chariot','Nexo Knights',70314,2,'https://www.lego.com/cdn/product-assets/product.img.pri/70314_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6150177.pdf','One engine cone missing, orange blob monsters on chariot missing. No minifigs, horse, or loose bits','2026-09-06 14:58:51.843290','2026-09-06 14:58:51.843290',4);
 INSERT INTO lego_sets VALUES(45,'General Magmar''s Siege Machine of Doom','Nexo Knights',70321,2,'https://www.lego.com/cdn/product-assets/product.img.pri/70321_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6163917.pdf','Spikes missing from all wheels, no minifigs, horse, or accessories.','2026-09-06 15:11:16.872660','2026-09-06 15:11:16.872660',4);
+CREATE TABLE IF NOT EXISTS "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL);
+INSERT INTO active_storage_blobs VALUES(1,'oey0ayimeu465cngmxpmtd99m37x','70316_01.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4798561,'FrTtRl9oyPjGXdOa2zjwFA==','2026-09-07 19:59:22.476523');
+INSERT INTO active_storage_blobs VALUES(2,'myoai58iid5ir7d6dm1ja9o5eo0k','70316_02.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4957630,'4n7iUGNB39CgMzfFkn+RoQ==','2026-09-07 19:59:22.499050');
+INSERT INTO active_storage_blobs VALUES(3,'mitpiwbqpkpwyyf9swgvmkpi3jh8','70316_03.jpg','image/jpeg','{"identified":true}','local',4667008,'Bd5WiJMsKcTtr7+5nhoK4Q==','2026-09-07 19:59:22.519677');
+INSERT INTO active_storage_blobs VALUES(4,'6631chskg7372jnnlogl4j14kfq2','70316_04.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',5113079,'4RnT896pLJOa6GL3ps77bA==','2026-09-07 19:59:22.541696');
+INSERT INTO active_storage_blobs VALUES(5,'zduk12y3uikk6efffqb268xt7zbv','70316_05.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4434764,'D95yMcOT1NCbHSjH0sJfHA==','2026-09-07 19:59:22.562551');
+CREATE TABLE IF NOT EXISTS "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+);
+INSERT INTO active_storage_attachments VALUES(1,'photos','LegoSet',43,1,'2026-09-07 19:59:22.480160');
+INSERT INTO active_storage_attachments VALUES(2,'photos','LegoSet',43,2,'2026-09-07 19:59:22.501967');
+INSERT INTO active_storage_attachments VALUES(3,'photos','LegoSet',43,3,'2026-09-07 19:59:22.522553');
+INSERT INTO active_storage_attachments VALUES(4,'photos','LegoSet',43,4,'2026-09-07 19:59:22.544670');
+INSERT INTO active_storage_attachments VALUES(5,'photos','LegoSet',43,5,'2026-09-07 19:59:22.565703');
+CREATE TABLE IF NOT EXISTS "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+);
 DELETE FROM sqlite_sequence;
 INSERT INTO sqlite_sequence VALUES('lego_sets',45);
 INSERT INTO sqlite_sequence VALUES('locations',7);
+INSERT INTO sqlite_sequence VALUES('active_storage_blobs',5);
+INSERT INTO sqlite_sequence VALUES('active_storage_attachments',5);
 CREATE INDEX "index_lego_sets_on_location_id" ON "lego_sets" ("location_id");
+CREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key");
+CREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id");
+CREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id");
+CREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest");
 COMMIT;
