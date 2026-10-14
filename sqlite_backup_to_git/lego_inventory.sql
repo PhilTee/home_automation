@@ -55,6 +55,7 @@ INSERT INTO lego_sets VALUES(42,'Tormak''s Shadow Blazer','Chima',70222,0,'https
 INSERT INTO lego_sets VALUES(43,'Jestro''s Evil Mobile','Nexo Knights',70316,0,'https://www.lego.com/cdn/product-assets/product.img.pri/70316_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6150187.pdf','Missing red and black flags and the arrows they attach to, along with minifigs skull.  No minifigs/characters, accessories or horse.','2026-09-06 14:46:53.796961','2026-09-07 19:59:27.957133',4);
 INSERT INTO lego_sets VALUES(44,'Beast Master''s Chaos Chariot','Nexo Knights',70314,2,'https://www.lego.com/cdn/product-assets/product.img.pri/70314_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6150177.pdf','One engine cone missing, orange blob monsters on chariot missing. No minifigs, horse, or loose bits','2026-09-06 14:58:51.843290','2026-09-06 14:58:51.843290',4);
 INSERT INTO lego_sets VALUES(45,'General Magmar''s Siege Machine of Doom','Nexo Knights',70321,2,'https://www.lego.com/cdn/product-assets/product.img.pri/70321_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6163917.pdf','Spikes missing from all wheels, no minifigs, horse, or accessories.','2026-09-06 15:11:16.872660','2026-09-06 15:11:16.872660',4);
+INSERT INTO lego_sets VALUES(46,'Braptor''s Wing Striker','Chima',70128,1,'https://www.lego.com/cdn/product-assets/product.img.pri/70128_prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6073917.pdf','','2026-10-13 12:34:08.199224','2026-10-13 12:34:08.199224',4);
 CREATE TABLE IF NOT EXISTS "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL);
 INSERT INTO active_storage_blobs VALUES(1,'oey0ayimeu465cngmxpmtd99m37x','70316_01.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4798561,'FrTtRl9oyPjGXdOa2zjwFA==','2026-09-07 19:59:22.476523');
 INSERT INTO active_storage_blobs VALUES(2,'myoai58iid5ir7d6dm1ja9o5eo0k','70316_02.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4957630,'4n7iUGNB39CgMzfFkn+RoQ==','2026-09-07 19:59:22.499050');
@@ -75,7 +76,7 @@ FOREIGN KEY ("blob_id")
   REFERENCES "active_storage_blobs" ("id")
 );
 DELETE FROM sqlite_sequence;
-INSERT INTO sqlite_sequence VALUES('lego_sets',45);
+INSERT INTO sqlite_sequence VALUES('lego_sets',46);
 INSERT INTO sqlite_sequence VALUES('locations',7);
 INSERT INTO sqlite_sequence VALUES('active_storage_blobs',5);
 INSERT INTO sqlite_sequence VALUES('active_storage_attachments',5);
