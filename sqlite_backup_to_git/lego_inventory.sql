@@ -14,6 +14,8 @@ INSERT INTO locations VALUES(4,'Den Floor','2025-08-22 20:31:01.784451','2025-08
 INSERT INTO locations VALUES(5,'Kallax 3','2025-08-22 20:43:00.635550','2025-08-22 20:43:00.635550');
 INSERT INTO locations VALUES(6,'Kallax 4','2025-08-22 20:54:49.451097','2025-08-22 20:54:49.451097');
 INSERT INTO locations VALUES(7,'Den floor','2026-08-24 20:07:34.326294','2026-08-24 20:07:34.326294');
+INSERT INTO locations VALUES(8,'Temporary','2026-10-27 13:40:50.832751','2026-10-27 13:40:50.832751');
+INSERT INTO locations VALUES(9,'Lab','2026-10-27 13:57:01.273444','2026-10-27 13:57:01.273444');
 CREATE TABLE IF NOT EXISTS "lego_sets" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT NULL, "theme" varchar DEFAULT NULL, "number" integer DEFAULT NULL, "status" integer DEFAULT NULL, "image_url" varchar DEFAULT NULL, "instructions_url" varchar DEFAULT NULL, "comments" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "location_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_758e9a9fcf"
 FOREIGN KEY ("location_id")
   REFERENCES "locations" ("id")
@@ -57,6 +59,8 @@ INSERT INTO lego_sets VALUES(44,'Beast Master''s Chaos Chariot','Nexo Knights',7
 INSERT INTO lego_sets VALUES(45,'General Magmar''s Siege Machine of Doom','Nexo Knights',70321,2,'https://www.lego.com/cdn/product-assets/product.img.pri/70321_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6163917.pdf','Spikes missing from all wheels, no minifigs, horse, or accessories.','2026-09-06 15:11:16.872660','2026-09-06 15:11:16.872660',4);
 INSERT INTO lego_sets VALUES(46,'Braptor''s Wing Striker','Chima',70128,1,'https://www.lego.com/cdn/product-assets/product.img.pri/70128_prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6073917.pdf','','2026-10-13 12:34:08.199224','2026-10-13 12:34:08.199224',4);
 INSERT INTO lego_sets VALUES(47,'Minions in Gru''s Lab','LEGO® Minions',75546,2,'https://www.lego.com/cdn/product-assets/product.img.pri/75546_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6324210.pdf','Complete','2026-10-26 15:32:13.765155','2026-10-26 15:32:20.221625',7);
+INSERT INTO lego_sets VALUES(51,'MSAI validation','Security',414641,1,NULL,NULL,'MSAI','2026-10-27 13:57:01.379581','2026-10-27 13:57:01.379581',9);
+INSERT INTO lego_sets VALUES(52,'MSAI-CVE66066-f54936c6b1','Security',218360,1,NULL,NULL,'MSAI-CVE66066-f54936c6b1','2026-10-27 13:57:38.443996','2026-10-27 13:57:38.496224',9);
 CREATE TABLE IF NOT EXISTS "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL);
 INSERT INTO active_storage_blobs VALUES(1,'oey0ayimeu465cngmxpmtd99m37x','70316_01.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4798561,'FrTtRl9oyPjGXdOa2zjwFA==','2026-09-07 19:59:22.476523');
 INSERT INTO active_storage_blobs VALUES(2,'myoai58iid5ir7d6dm1ja9o5eo0k','70316_02.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4957630,'4n7iUGNB39CgMzfFkn+RoQ==','2026-09-07 19:59:22.499050');
@@ -64,6 +68,8 @@ INSERT INTO active_storage_blobs VALUES(3,'mitpiwbqpkpwyyf9swgvmkpi3jh8','70316_
 INSERT INTO active_storage_blobs VALUES(4,'6631chskg7372jnnlogl4j14kfq2','70316_04.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',5113079,'4RnT896pLJOa6GL3ps77bA==','2026-09-07 19:59:22.541696');
 INSERT INTO active_storage_blobs VALUES(5,'zduk12y3uikk6efffqb268xt7zbv','70316_05.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4434764,'D95yMcOT1NCbHSjH0sJfHA==','2026-09-07 19:59:22.562551');
 INSERT INTO active_storage_blobs VALUES(6,'5e1oy8i7svfxv9l4jwwag2pa11aj','75546_01.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',6688657,'2i2hvkF4FJqRMbbvfwQDUA==','2026-10-26 15:32:16.108081');
+INSERT INTO active_storage_blobs VALUES(8,'5r19rtcrrgeh9hglez37fazmfogo','unused.bin','image/png','{"identified":true,"analyzed":true}','local',1,'ndTkYSaMgDT1yFZOFVxnpg==','2026-10-27 13:31:53.815339');
+INSERT INTO active_storage_blobs VALUES(10,'t51fn7avikdchgddjpgjm0esmsh7','218360_01.png','image/png','{"identified":true,"analyzed":true}','local',74,'kkIweNe0uh57mshJOOJuFA==','2026-10-27 13:57:38.451929');
 CREATE TABLE IF NOT EXISTS "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
 FOREIGN KEY ("blob_id")
   REFERENCES "active_storage_blobs" ("id")
@@ -74,15 +80,16 @@ INSERT INTO active_storage_attachments VALUES(3,'photos','LegoSet',43,3,'2026-09
 INSERT INTO active_storage_attachments VALUES(4,'photos','LegoSet',43,4,'2026-09-07 19:59:22.544670');
 INSERT INTO active_storage_attachments VALUES(5,'photos','LegoSet',43,5,'2026-09-07 19:59:22.565703');
 INSERT INTO active_storage_attachments VALUES(6,'photos','LegoSet',47,6,'2026-10-26 15:32:16.194646');
+INSERT INTO active_storage_attachments VALUES(9,'photos','LegoSet',52,10,'2026-10-27 13:57:38.454673');
 CREATE TABLE IF NOT EXISTS "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
 FOREIGN KEY ("blob_id")
   REFERENCES "active_storage_blobs" ("id")
 );
 DELETE FROM sqlite_sequence;
-INSERT INTO sqlite_sequence VALUES('lego_sets',47);
-INSERT INTO sqlite_sequence VALUES('locations',7);
-INSERT INTO sqlite_sequence VALUES('active_storage_blobs',6);
-INSERT INTO sqlite_sequence VALUES('active_storage_attachments',6);
+INSERT INTO sqlite_sequence VALUES('lego_sets',52);
+INSERT INTO sqlite_sequence VALUES('locations',9);
+INSERT INTO sqlite_sequence VALUES('active_storage_blobs',10);
+INSERT INTO sqlite_sequence VALUES('active_storage_attachments',9);
 CREATE INDEX "index_lego_sets_on_location_id" ON "lego_sets" ("location_id");
 CREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key");
 CREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id");
