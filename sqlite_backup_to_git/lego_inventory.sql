@@ -61,6 +61,9 @@ INSERT INTO lego_sets VALUES(46,'Braptor''s Wing Striker','Chima',70128,1,'https
 INSERT INTO lego_sets VALUES(47,'Minions in Gru''s Lab','LEGO® Minions',75546,2,'https://www.lego.com/cdn/product-assets/product.img.pri/75546_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6324210.pdf','Complete','2026-10-26 15:32:13.765155','2026-10-26 15:32:20.221625',7);
 INSERT INTO lego_sets VALUES(51,'MSAI validation','Security',414641,1,NULL,NULL,'MSAI','2026-10-27 13:57:01.379581','2026-10-27 13:57:01.379581',9);
 INSERT INTO lego_sets VALUES(52,'MSAI-CVE66066-f54936c6b1','Security',218360,1,NULL,NULL,'MSAI-CVE66066-f54936c6b1','2026-10-27 13:57:38.443996','2026-10-27 13:57:38.496224',9);
+INSERT INTO lego_sets VALUES(53,'Amusement Park Space Ride','Friends New',41128,0,'https://www.lego.com/cdn/product-assets/product.img.pri/41128_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6167008.pdf','No icecreams, Olivia, or dollar bill','2026-11-11 09:30:28.735027','2026-11-11 09:30:33.428098',4);
+INSERT INTO lego_sets VALUES(54,'Buzz & Woody’s Carnival Mania!','Toy Story',10770,2,'https://www.lego.com/cdn/product-assets/product.img.pri/10770_prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6278828.pdf',replace(replace('Very incomplete. Green cone missing from shooting gallery. Small icecreams missing from roof of parlour, and maybe a transparent screen, along with spoon.\r\nNot found octopus, 2x cars, cannon, crate, ammo, or any characters.','\r',char(13)),'\n',char(10)),'2026-11-11 11:27:10.216766','2026-11-11 11:27:15.425465',7);
+INSERT INTO lego_sets VALUES(55,'Olivia''s Cupcake Café','Friends New',41366,2,'https://www.lego.com/cdn/product-assets/product.img.pri/41366_Prod.jpg','https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6262673.pdf','Missing vending machine, a white mug and one character (black hair, skirt)','2026-11-11 11:51:00.454766','2026-11-11 11:51:05.917345',4);
 CREATE TABLE IF NOT EXISTS "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL);
 INSERT INTO active_storage_blobs VALUES(1,'oey0ayimeu465cngmxpmtd99m37x','70316_01.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4798561,'FrTtRl9oyPjGXdOa2zjwFA==','2026-09-07 19:59:22.476523');
 INSERT INTO active_storage_blobs VALUES(2,'myoai58iid5ir7d6dm1ja9o5eo0k','70316_02.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4957630,'4n7iUGNB39CgMzfFkn+RoQ==','2026-09-07 19:59:22.499050');
@@ -70,6 +73,12 @@ INSERT INTO active_storage_blobs VALUES(5,'zduk12y3uikk6efffqb268xt7zbv','70316_
 INSERT INTO active_storage_blobs VALUES(6,'5e1oy8i7svfxv9l4jwwag2pa11aj','75546_01.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',6688657,'2i2hvkF4FJqRMbbvfwQDUA==','2026-10-26 15:32:16.108081');
 INSERT INTO active_storage_blobs VALUES(8,'5r19rtcrrgeh9hglez37fazmfogo','unused.bin','image/png','{"identified":true,"analyzed":true}','local',1,'ndTkYSaMgDT1yFZOFVxnpg==','2026-10-27 13:31:53.815339');
 INSERT INTO active_storage_blobs VALUES(10,'t51fn7avikdchgddjpgjm0esmsh7','218360_01.png','image/png','{"identified":true,"analyzed":true}','local',74,'kkIweNe0uh57mshJOOJuFA==','2026-10-27 13:57:38.451929');
+INSERT INTO active_storage_blobs VALUES(11,'fn19bkuybzyqrdx4ywz5s0mhq79s','41128_01.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',5541958,'3sadT16/DaEF4ClXOYf8Aw==','2026-11-11 09:30:30.630870');
+INSERT INTO active_storage_blobs VALUES(12,'sgnefuu7e4itsx80334zrwuzsztb','10770_01.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4584534,'QBsL8t1F5sJiGKdjhP9XmA==','2026-11-11 11:27:10.237657');
+INSERT INTO active_storage_blobs VALUES(13,'uoiqcpf2m3maxujxc4x025h29ei6','10770_02.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',3471949,'q2HUPZQNiykOAp1KYJLhdQ==','2026-11-11 11:27:10.282710');
+INSERT INTO active_storage_blobs VALUES(14,'xm568n8fr4wdzekhbn2v2zohafni','10770_03.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4027834,'zslsHpvuF+/wqyrLTq7QbA==','2026-11-11 11:27:10.306341');
+INSERT INTO active_storage_blobs VALUES(15,'iswk2nr2jsi5dpwuvy19p8vzgl12','41366_01.jpg','image/jpeg','{"identified":true}','local',4981985,'Ubi1c28sV1Zm4r6WXWOdtg==','2026-11-11 11:51:00.698264');
+INSERT INTO active_storage_blobs VALUES(16,'qalv1bm8hksakjnpp9k6xt82yxtd','41366_02.jpg','image/jpeg','{"identified":true,"analyzed":true}','local',4520886,'Hk7ivFsDf3idGrsvXmvbpA==','2026-11-11 11:51:00.721453');
 CREATE TABLE IF NOT EXISTS "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
 FOREIGN KEY ("blob_id")
   REFERENCES "active_storage_blobs" ("id")
@@ -81,15 +90,21 @@ INSERT INTO active_storage_attachments VALUES(4,'photos','LegoSet',43,4,'2026-09
 INSERT INTO active_storage_attachments VALUES(5,'photos','LegoSet',43,5,'2026-09-07 19:59:22.565703');
 INSERT INTO active_storage_attachments VALUES(6,'photos','LegoSet',47,6,'2026-10-26 15:32:16.194646');
 INSERT INTO active_storage_attachments VALUES(9,'photos','LegoSet',52,10,'2026-10-27 13:57:38.454673');
+INSERT INTO active_storage_attachments VALUES(10,'photos','LegoSet',53,11,'2026-11-11 09:30:30.744496');
+INSERT INTO active_storage_attachments VALUES(11,'photos','LegoSet',54,12,'2026-11-11 11:27:10.249367');
+INSERT INTO active_storage_attachments VALUES(12,'photos','LegoSet',54,13,'2026-11-11 11:27:10.286611');
+INSERT INTO active_storage_attachments VALUES(13,'photos','LegoSet',54,14,'2026-11-11 11:27:10.309115');
+INSERT INTO active_storage_attachments VALUES(14,'photos','LegoSet',55,15,'2026-11-11 11:51:00.702986');
+INSERT INTO active_storage_attachments VALUES(15,'photos','LegoSet',55,16,'2026-11-11 11:51:00.724320');
 CREATE TABLE IF NOT EXISTS "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
 FOREIGN KEY ("blob_id")
   REFERENCES "active_storage_blobs" ("id")
 );
 DELETE FROM sqlite_sequence;
-INSERT INTO sqlite_sequence VALUES('lego_sets',52);
+INSERT INTO sqlite_sequence VALUES('lego_sets',55);
 INSERT INTO sqlite_sequence VALUES('locations',9);
-INSERT INTO sqlite_sequence VALUES('active_storage_blobs',10);
-INSERT INTO sqlite_sequence VALUES('active_storage_attachments',9);
+INSERT INTO sqlite_sequence VALUES('active_storage_blobs',16);
+INSERT INTO sqlite_sequence VALUES('active_storage_attachments',15);
 CREATE INDEX "index_lego_sets_on_location_id" ON "lego_sets" ("location_id");
 CREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key");
 CREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id");
